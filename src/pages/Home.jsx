@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Home.css';
-import { FaGithub, FaLinkedin, FaCode, FaRobot, FaPaintBrush, FaLaptopCode } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaCode, FaRobot, FaPaintBrush, FaLaptopCode, FaExternalLinkAlt } from "react-icons/fa";
 import profileImage from '../assets/image.jpg'; // Add your image in assets folder
 
 const Home = () => {
@@ -86,6 +86,19 @@ const Home = () => {
 
   // Projects data
   const projects = [
+
+
+
+      {
+      id: 3,
+      title: 'Hospital Management System',
+      role: 'Full Stack Developer',
+      description: 'Complete hospital management solution with patient records, appointment scheduling, lab booking, and billing system using MERN stack.',
+      tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux', 'JWT Auth'],
+      rating: '★★★★★',
+      year: '2026',
+      liveLink: 'https://artifix-flame.vercel.app/',
+    },
     {
       id: 1,
       title: 'Hostel Management System',
@@ -95,9 +108,12 @@ const Home = () => {
       rating: '★★★★★',
       year: '2025',
       liveLink: 'https://amalgentshostel.netlify.app',
-      githubLink: 'https://github.com/AllenSunilMathew/hostel-management'
+            // githubLink: 'https://github.com/AllenSunilMathew/skin-cancer-detection'
+
     },
-    {
+  
+  
+      {
       id: 2,
       title: 'Skin Cancer Detection System',
       role: 'AI/ML Engineer & Full Stack Developer',
@@ -105,19 +121,8 @@ const Home = () => {
       tags: ['React', 'Python', 'TensorFlow', 'OpenCV', 'scikit-learn', 'Node.js', 'CNN'],
       rating: '★★★★☆',
       year: '2024',
-      liveLink: '#',
-      githubLink: 'https://github.com/AllenSunilMathew/skin-cancer-detection'
-    },
-    {
-      id: 3,
-      title: 'Hospital Management System',
-      role: 'Full Stack Developer',
-      description: 'Complete hospital management solution with patient records, appointment scheduling, lab booking, and billing system using MERN stack.',
-      tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux', 'JWT Auth'],
-      rating: '★★★★★',
-      year: '2025',
-      liveLink: '#',
-      githubLink: 'https://github.com/AllenSunilMathew/hospital-management'
+      liveLink: '',
+      // githubLink: 'https://github.com/AllenSunilMathew/skin-cancer-detection'
     },
   ];
 
@@ -485,18 +490,17 @@ const Home = () => {
                     </div>
                   </div>
 
-                  {/* <div className="project-footer">
+                  <div className="project-footer">
                     <div className="project-links">
-                      <a href={project.liveLink} className="project-link" target="_blank" rel="noreferrer">
-                        <span className="link-icon">🌐</span>
-                        Live Demo
-                      </a>
-                      <a href={project.githubLink} className="project-link" target="_blank" rel="noreferrer">
-                        <span className="link-icon">💻</span>
-                        View Code
-                      </a>
+                      {project.liveLink && project.liveLink !== '#' && (
+                        <a href={project.liveLink} className="project-link live-link" target="_blank" rel="noreferrer">
+                          <FaExternalLinkAlt />
+                          Live Demo
+                        </a>
+                      )}
+                    
                     </div>
-                  </div> */}
+                  </div>
 
                   <div className="project-glow"></div>
                 </div>

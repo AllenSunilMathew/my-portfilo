@@ -1498,14 +1498,17 @@ body {
   color: #fff;
 }
 
+/* Project Footer with Links */
 .project-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .project-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .project-link {
@@ -1517,15 +1520,35 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.3s;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
 }
 
 .project-link:hover {
   color: #fff;
   background: rgba(255, 215, 0, 0.2);
   transform: translateY(-2px);
+}
+
+.project-link.live-link {
+  background: linear-gradient(45deg, rgba(255, 215, 0, 0.15), rgba(255, 140, 0, 0.15));
+  border-color: rgba(255, 215, 0, 0.4);
+}
+
+.project-link.live-link:hover {
+  background: linear-gradient(45deg, rgba(255, 215, 0, 0.3), rgba(255, 140, 0, 0.3));
+}
+
+.project-link.github-link {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.project-link.github-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .link-icon {
@@ -1535,22 +1558,6 @@ body {
 
 .project-link:hover .link-icon {
   transform: scale(1.2);
-}
-
-.project-glow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.3s;
-  z-index: 0;
-}
-
-.project-card:hover .project-glow {
-  opacity: 1;
 }
 
 /* Skills section */
